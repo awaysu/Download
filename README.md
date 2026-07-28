@@ -33,13 +33,13 @@ Windows 原生終端機模擬器。
 
 | 檔案 | 版本 | 大小 |
 |---|---|---|
-| [`AwayTerminal-Setup-1.0.1.exe`](./AwayTerminal-Setup-1.0.1.exe) | 1.0.1 | 55.6 MB |
+| [`AwayTerminal-Setup-1.0.4.exe`](./AwayTerminal-Setup-1.0.4.exe) | 1.0.4 | 55.6 MB |
 
-**SHA256**：`78D77173B1AB20F18F3008061508143442A998A39B9C6082ED2B2D29783A2216`
+**SHA256**：`839FE4110FB89A922D107B882AAD8B79433EA6E666B593E63184EA4EA9D85619`
 
 ### 安裝說明
 
-1. 下載並執行 `AwayTerminal-Setup-1.0.1.exe`。
+1. 下載並執行 `AwayTerminal-Setup-1.0.4.exe`。
 2. 若跳出「Windows 已保護你的電腦」→ 點 **其他資訊 → 仍要執行**。
 3. UAC 出現按 **是**（安裝需系統管理員權限：會安裝程式、匯入自簽憑證、必要時安裝 WebView2 執行環境）。
 4. 安裝完成後，程式本體不會再被 Windows 擋。
