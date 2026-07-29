@@ -9,8 +9,19 @@
 
 | 檔案 | 版本 | 大小 | SHA256 |
 |---|---|---|---|
+| [`AwayPhotoRawEditor-Setup-v1.0.4.exe`](./AwayPhotoRawEditor-Setup-v1.0.4.exe) | 1.0.4 | 57.7 MB | `0E759FDE947EFADAB0EC8A8EF00D2DACE0A81CB1E202A7CC6D14A833013DC52D` |
 | [`AwayPhotoRawEditor-Setup-v1.0.3.exe`](./AwayPhotoRawEditor-Setup-v1.0.3.exe) | 1.0.3 | 57.7 MB | `D3F3DF34219196F53310727245D91BE4EC7F429D14C3AB448D28354B6CA21955` |
 | [`AwayPhotoRawEditor-Setup-v1.0.0.exe`](./AwayPhotoRawEditor-Setup-v1.0.0.exe) | 1.0.0 | 57.7 MB | `93346142D65B5C0ECE91FB1D235224C01DA2E11F6DD5899340144F71034B2DC4` |
+
+## v1.0.4 更新內容
+
+- 預覽列隱藏功能改版：右鍵「隱藏且不輸出」／「取消隱藏」，並可切換「不顯示隱藏／顯示全部」；
+  隱藏的照片顯示斜線眼睛圖示、編號跳號（#2 隱藏後顯示 #1、#3），匯出一律略過隱藏照片
+- 裁切「角度」改為滑桿（±45°，同廣角變形樣式），拖曳時畫面即時旋轉預覽
+- 曝光滑桿（基本調整與漸層）範圍由 ±5 改為 ±2，調整更精細
+- 修護工具「仿製／修補」切換會立即套用到目前選取的修護點
+- 匯出「寬長最大值」改名為「符合寬度高度(像素)」
+- 選單新增「支援RAW檔相機列表」（連到 LibRaw 官方支援相機清單）
 
 ## v1.0.3 更新內容
 
@@ -23,7 +34,7 @@
 
 ## 安裝說明
 
-1. 下載並執行 `AwayPhotoRawEditor-Setup-v1.0.3.exe`。
+1. 下載並執行 `AwayPhotoRawEditor-Setup-v1.0.4.exe`。
 2. 若跳出「Windows 已保護你的電腦」→ 點 **其他資訊 → 仍要執行**。
 3. 安裝為**每使用者**，不需系統管理員權限（不會出現 UAC）。
 4. 內含 .NET 執行環境（self-contained），不必另裝 .NET。
