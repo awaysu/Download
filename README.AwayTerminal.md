@@ -10,8 +10,15 @@ Windows 原生終端機模擬器。分頁 / 分割畫面、PowerShell、SSH、Te
 
 | 檔案 | 版本 | 大小 | SHA256 |
 |---|---|---|---|
+| [`AwayTerminal-Setup-1.0.9.exe`](./AwayTerminal-Setup-1.0.9.exe) | 1.0.9 | 55.6 MB | `4F015F81D800390A4D8EF03DC627889344D457D20506233EE5ED372A7C41A295` |
 | [`AwayTerminal-Setup-1.0.8.exe`](./AwayTerminal-Setup-1.0.8.exe) | 1.0.8 | 55.6 MB | `F12A5C2EB17C3D2244127D6DE9CCF43E603F28B886400DD22EE7B4FCF63AD420` |
 | [`AwayTerminal-Setup-1.0.5.exe`](./AwayTerminal-Setup-1.0.5.exe) | 1.0.5 | 55.6 MB | `C1042B90787D353E604E06BA50B05FCD98D94218E0810D4D8E5A288FE3EAD3E5` |
+
+## v1.0.9 更新內容
+
+- 視窗標題路徑擴大支援：提示行解析新增 RHEL/CentOS（`[user@host dir]#`）、Android adb（`host:/path $`）、
+  zsh/fish 等格式，SSH/Telnet/COM 連進的裝置也能顯示目前路徑
+- claude／自訂連線分頁（無提示行）改顯示啟動時選的工作目錄，多開專案時一眼分辨
 
 ## v1.0.8 更新內容
 
@@ -32,7 +39,7 @@ Windows 原生終端機模擬器。分頁 / 分割畫面、PowerShell、SSH、Te
 
 ## 安裝說明
 
-1. 下載並執行 `AwayTerminal-Setup-1.0.8.exe`。
+1. 下載並執行 `AwayTerminal-Setup-1.0.9.exe`。
 2. 若跳出「Windows 已保護你的電腦」→ 點 **其他資訊 → 仍要執行**。
 3. UAC 出現按 **是**（安裝需系統管理員權限：會安裝程式、匯入自簽憑證、必要時安裝 WebView2 執行環境）。
 4. 安裝完成後，程式本體不會再被 Windows 擋。
