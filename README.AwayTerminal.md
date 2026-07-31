@@ -10,9 +10,15 @@ Windows 原生終端機模擬器。分頁 / 分割畫面、PowerShell、SSH、Te
 
 | 檔案 | 版本 | 大小 | SHA256 |
 |---|---|---|---|
+| [`AwayTerminal-Setup-1.0.10.exe`](./AwayTerminal-Setup-1.0.10.exe) | 1.0.10 | 55.6 MB | `A5AE533C1E29F2C8EED502AD88FDEC6C51F41809A4CFD3CA47F247C3D78A4C95` |
 | [`AwayTerminal-Setup-1.0.9.exe`](./AwayTerminal-Setup-1.0.9.exe) | 1.0.9 | 55.6 MB | `4F015F81D800390A4D8EF03DC627889344D457D20506233EE5ED372A7C41A295` |
 | [`AwayTerminal-Setup-1.0.8.exe`](./AwayTerminal-Setup-1.0.8.exe) | 1.0.8 | 55.6 MB | `F12A5C2EB17C3D2244127D6DE9CCF43E603F28B886400DD22EE7B4FCF63AD420` |
-| [`AwayTerminal-Setup-1.0.5.exe`](./AwayTerminal-Setup-1.0.5.exe) | 1.0.5 | 55.6 MB | `C1042B90787D353E604E06BA50B05FCD98D94218E0810D4D8E5A288FE3EAD3E5` |
+
+## v1.0.10 更新內容
+
+- Claude Code 分頁多行貼上修正：先前貼多行文字有時會被拆成好幾段（尾端碎片留在輸入框、
+  出現「paste again to expand」），Windows 10 的主控台會把貼上標記從輸入流丟掉、
+  Claude 只能靠輸入時序猜測所致。改用 Claude 自己的軟換行按鍵送出，200 行貼上也完整不分裂
 
 ## v1.0.9 更新內容
 
@@ -39,7 +45,7 @@ Windows 原生終端機模擬器。分頁 / 分割畫面、PowerShell、SSH、Te
 
 ## 安裝說明
 
-1. 下載並執行 `AwayTerminal-Setup-1.0.9.exe`。
+1. 下載並執行 `AwayTerminal-Setup-1.0.10.exe`。
 2. 若跳出「Windows 已保護你的電腦」→ 點 **其他資訊 → 仍要執行**。
 3. UAC 出現按 **是**（安裝需系統管理員權限：會安裝程式、匯入自簽憑證、必要時安裝 WebView2 執行環境）。
 4. 安裝完成後，程式本體不會再被 Windows 擋。
