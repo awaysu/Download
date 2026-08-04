@@ -10,9 +10,36 @@ Windows 原生終端機模擬器。分頁 / 分割畫面、PowerShell、SSH、Te
 
 | 檔案 | 版本 | 大小 | SHA256 |
 |---|---|---|---|
+| [`AwayTerminal-Setup-1.0.20.exe`](./AwayTerminal-Setup-1.0.20.exe) | 1.0.20 | 61.8 MB | `3085EAAAD4CA5D9D77399C9AA2CDD7DB8EEC5580FF0AC49CDBAD896D225256D2` |
 | [`AwayTerminal-Setup-1.0.11.exe`](./AwayTerminal-Setup-1.0.11.exe) | 1.0.11 | 55.6 MB | `BF232C9227DE6979566AA349AE36AFC2E8626901B3FA0841FDF29632A1335083` |
 | [`AwayTerminal-Setup-1.0.10.exe`](./AwayTerminal-Setup-1.0.10.exe) | 1.0.10 | 55.6 MB | `A5AE533C1E29F2C8EED502AD88FDEC6C51F41809A4CFD3CA47F247C3D78A4C95` |
-| [`AwayTerminal-Setup-1.0.9.exe`](./AwayTerminal-Setup-1.0.9.exe) | 1.0.9 | 55.6 MB | `4F015F81D800390A4D8EF03DC627889344D457D20506233EE5ED372A7C41A295` |
+
+## v1.0.12 ~ v1.0.20 更新內容
+
+**安裝與體積**
+
+- 改為**框架相依**發佈：安裝後磁碟佔用由 184.8 MB 降到 **7.4 MB**。安裝檔內含 .NET 9 Desktop
+  Runtime，僅在你的電腦沒有時才安裝；之後 .NET 的安全性更新改由 Windows Update 維護
+- 升級時會清掉舊版殘留的執行環境檔案，不再逐版堆積
+
+**授權與安全**
+
+- 加入 **MIT 授權**與第三方聲明（`LICENSE`、`THIRD-PARTY-NOTICES.md`，隨程式一起安裝）
+- **不再打包 Google 的 adb**，改用你電腦上已安裝的 Android SDK Platform Tools
+  （自動搜尋 PATH、ANDROID_HOME / ANDROID_SDK_ROOT、Android Studio 預設位置）
+- **安裝時不再把憑證匯入系統的「受信任的根」**。想讓 UAC 顯示發行者名稱的人，可自行執行
+  安裝目錄下的 `trust-publisher.ps1`（只寫入自己的憑證存放區、不需系統管理員權限）
+
+**功能**
+
+- 終端機右鍵新增「**複製且貼上**」：選取的文字複製後直接貼回終端機
+- **Claude Code 多行貼上修正**：不再被拆成好幾段（Windows 10 主控台會丟棄貼上標記，
+  改用 Claude 自己的軟換行鍵送出，200 行貼上也完整）
+- 「新連接」選單重整：預設區只留 PowerShell／SSH-Telnet／連接埠；**ADB 與其他工具改由
+  「自訂…」管理**（可用「自動偵測」一鍵加入），**全新安裝的自訂清單是空的**
+- 常用字串換上新的預設範例；範例只在第一次建立設定檔時放入，**刪掉不會再長回來**
+- Telegram 遠端降噪：**打字時不再誤推播**「完成」訊息，沒有新輸出時也不再送出空訊息
+- 修正部分情況下**資料夾選擇視窗開在主視窗後面**、看起來像「點了沒反應」的問題
 
 ## v1.0.11 更新內容
 
@@ -50,9 +77,9 @@ Windows 原生終端機模擬器。分頁 / 分割畫面、PowerShell、SSH、Te
 
 ## 安裝說明
 
-1. 下載並執行 `AwayTerminal-Setup-1.0.11.exe`。
+1. 下載並執行 `AwayTerminal-Setup-1.0.20.exe`。
 2. 若跳出「Windows 已保護你的電腦」→ 點 **其他資訊 → 仍要執行**。
 3. UAC 出現按 **是**（安裝需系統管理員權限：會安裝程式、匯入自簽憑證、必要時安裝 WebView2 執行環境）。
 4. 安裝完成後，程式本體不會再被 Windows 擋。
 
-> 內含 .NET 執行環境（self-contained），對方不必另裝 .NET。
+> 安裝檔已內含 .NET 9 Desktop Runtime，僅在對方電腦沒有時才會自動安裝，不必自行準備 .NET。
